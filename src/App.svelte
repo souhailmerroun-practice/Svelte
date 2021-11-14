@@ -1,8 +1,13 @@
 <script>
-	import Paragraph from './components/Paragraph.svelte'
+	
+	let count = 0
 
-	let name = 'world'
+	function handleClick() {
+		count += 1
+	}
+
 </script>
 
-<h1>Hello {name}!</h1>
-<Paragraph />
+<button on:click={handleClick}>
+	Click {count} times
+</button>
